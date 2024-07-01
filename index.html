@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Music Player App</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div>
+            <header>
+                <!-- Toggle theme wrapper -->
+                <section class="theme-wrapper">
+                    <button class="toggleThemeBtn" id="toggleThemeBtn" data-theme="light">
+                        <div id="lightThemeBtn"><i class="fa-solid fa-sun"></i></div>          
+                        <div id="darkThemeBtn"><i class="fa-solid fa-moon"></i></div>
+                    </button>
+                </section>
+                <h1 class="app-title">Music Player</h1>
+            </header>
+            <main class="main-wrapper">
+                <!-- All Songs list -->
+                <section class="songs-list-wrapper">
+                    <div>
+                        <label for="genres">Filter by Genre:</label>
+                        <select name="genres" id="genres">
+                        </select>
+                    </div>
+                    <div class="filtered-songs-list">
+                        <h3>
+                            All Songs
+                        </h3>
+                        <div class="song-list">
+
+                        </div>
+                    </div>
+                </section>
+                <!-- Song Card -->
+                <section class="song-card-wrapper">
+                    <div class="card">
+                        <img src="" alt="Avatar" id="image" style="width:100%">
+                        <div class="container">
+                            <h2 id="title"></h2>
+                            <p id="owner"></p>
+                        </div>
+                    </div>
+                    <audio id="song-player" controls>
+                        <source id="song-player-source" src="" type="audio/mp3">
+                    </audio>
+                    <div class="change-song">
+                        <div id="previous">
+                            <i class="fa-solid fa-backward-step"></i>
+                        </div>
+                        <div id="next">
+                            <i class="fa-solid fa-forward-step"></i>
+                        </div>
+                    </div>
+                    <div class="add-to-playlist">
+                        <button>Add to Playlist</button>
+                    </div>
+                </section>
+                <!-- Playlist -->
+                <section class="playlist-wrapper">
+                    <form id="create-playlist">
+                        <input type="text" id="playlist-name" name="playlist-name" value="" placeholder="Enter playlist name" />
+                        <button type="submit" class="submit-button">Create Playlist</button>
+                    </form>
+                    <h2>Current Playlist</h3>
+                    <diV class="current-playlist">
+
+                    </diV>
+                    <h2>All Playlists</h3>
+                    <div class="all-playlist">
+
+                    </div>
+                </section>
+            </main>
+        </div>
+        <script src="https://kit.fontawesome.com/c6ae991696.js" crossorigin="anonymous"></script>
+        <script src="index.js"></script>
+    </body>
+</html>
